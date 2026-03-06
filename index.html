@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Fazle Rabbi Faiyaz — Developer Portfolio</title>
+    <meta name="description" content="Fazle Rabbi Faiyaz's developer portfolio showcasing projects and skills, and allowing visitors to contact him.">
+</head>
+<body>
+    <header role="banner">
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="Fazle Rabbi Faiyaz — Home">FRF</a>
+            <nav role="navigation" aria-label="Primary navigation" id="primary-nav">
+                <ul role="list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button
+                class="hamburger"
+                id="hamburger-btn"
+                aria-label="Toggle navigation menu"
+                aria-controls="primary-nav"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="hero" aria-label="Introduction">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Software Developer</p>
+                <h1>Fazle Rabbi<br><em>Faiyaz</em></h1>
+                <p class="hero-tagline">Building thoughtful software at the intersection of web, mobile, and machine learning.</p>
+                <a href="#projects" class="cta-btn" aria-label="View my projects">View Work ↓</a>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">
+                <span class="deco-ring ring-1"></span>
+                <span class="deco-ring ring-2"></span>
+                <span class="deco-ring ring-3"></span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" aria-labelledby="about-heading">
+            <div class="section-inner">
+                <div class="section-label" aria-hidden="true">01 / About</div>
+                <h2 id="about-heading">About Me</h2>
+                <div class="about-body">
+                    <p>Hello! I'm a passionate software developer with experience in <strong>web development</strong>, <strong>mobile app development</strong>, and <strong>machine learning</strong>. I enjoy creating innovative solutions to complex problems and am always eager to learn new technologies.</p>
+                    <p>I thrive at the crossroads of clean engineering and thoughtful design — writing code that not only works, but works beautifully.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="section-inner">
+                <div class="section-label" aria-hidden="true">02 / Projects</div>
+                <h2 id="projects-heading">Projects</h2>
+
+                <!-- Step 4: Filter bar -->
+                <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" onclick="filterProjects('all')"    aria-pressed="true" >All</button>
+                    <button class="filter-btn"        onclick="filterProjects('web')"    aria-pressed="false">Web App</button>
+                    <button class="filter-btn"        onclick="filterProjects('mobile')" aria-pressed="false">Mobile</button>
+                    <button class="filter-btn"        onclick="filterProjects('ml')"     aria-pressed="false">ML</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid" role="list">
+
+                    <article class="project-card" role="listitem" data-category="web" aria-labelledby="project-a-title">
+                        <figure class="project-figure">
+                            <div class="project-visual">
+                                <img
+                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=FitTrack"
+                                    alt="FitTrack app dashboard — fitness tracking web application"
+                                    class="project-img lightbox-trigger"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-haspopup="dialog"
+                                    aria-label="View FitTrack screenshot in lightbox"
+                                >
+                            </div>
+                            <figcaption class="project-meta">
+                                <span class="project-tag">Web App</span>
+                                <h3 id="project-a-title">FitTrack</h3>
+                                <p>A web application that helps users set, monitor, and achieve their fitness goals with personalised dashboards and progress analytics.</p>
+                                <ul class="project-tech" aria-label="Technologies used">
+                                    <li>React</li>
+                                    <li>Django</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                                <a href="#" class="project-link" aria-label="View FitTrack project details">View Project →</a>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="project-card" role="listitem" data-category="mobile" aria-labelledby="project-b-title">
+                        <figure class="project-figure">
+                            <div class="project-visual">
+                                <img
+                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=SkyPulse"
+                                    alt="SkyPulse mobile app — real-time weather forecast interface"
+                                    class="project-img lightbox-trigger"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-haspopup="dialog"
+                                    aria-label="View SkyPulse screenshot in lightbox"
+                                >
+                            </div>
+                            <figcaption class="project-meta">
+                                <span class="project-tag">Mobile App</span>
+                                <h3 id="project-b-title">SkyPulse</h3>
+                                <p>A mobile app delivering real-time weather updates, hourly forecasts, and severe weather alerts using live meteorological data.</p>
+                                <ul class="project-tech" aria-label="Technologies used">
+                                    <li>React Native</li>
+                                    <li>OpenWeather API</li>
+                                    <li>AWS</li>
+                                </ul>
+                                <a href="#" class="project-link" aria-label="View SkyPulse project details">View Project →</a>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="project-card" role="listitem" data-category="ml" aria-labelledby="project-c-title">
+                        <figure class="project-figure">
+                            <div class="project-visual">
+                                <img
+                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=StockSeer"
+                                    alt="StockSeer ML model — predicted stock price chart output"
+                                    class="project-img lightbox-trigger"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-haspopup="dialog"
+                                    aria-label="View StockSeer screenshot in lightbox"
+                                >
+                            </div>
+                            <figcaption class="project-meta">
+                                <span class="project-tag">Machine Learning</span>
+                                <h3 id="project-c-title">StockSeer</h3>
+                                <p>A machine learning model that forecasts stock price movements using LSTM networks trained on multi-year historical market data.</p>
+                                <ul class="project-tech" aria-label="Technologies used">
+                                    <li>Python</li>
+                                    <li>TensorFlow</li>
+                                    <li>Flask</li>
+                                </ul>
+                                <a href="#" class="project-link" aria-label="View StockSeer project details">View Project →</a>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                </div>
+
+                <p class="projects-empty" id="projects-empty" hidden aria-live="polite">
+                    No projects found for this category.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="section-inner">
+                <div class="section-label" aria-hidden="true">03 / Skills</div>
+                <h2 id="skills-heading">Skills</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Languages</h3>
+                        <ul role="list" aria-label="Programming languages">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Frameworks</h3>
+                        <ul role="list" aria-label="Frameworks and libraries">
+                            <li>React</li>
+                            <li>React Native</li>
+                            <li>Django</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Tools &amp; Cloud</h3>
+                        <ul role="list" aria-label="Tools and cloud services">
+                            <li>Git &amp; GitHub</li>
+                            <li>Docker</li>
+                            <li>AWS</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">ML &amp; Data</h3>
+                        <ul role="list" aria-label="Machine learning and data tools">
+                            <li>TensorFlow</li>
+                            <li>PyTorch</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="section-inner">
+                <div class="section-label" aria-hidden="true">04 / Contact</div>
+                <h2 id="contact-heading">Get In Touch</h2>
+                <p class="contact-intro">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+
+                <form
+                    id="contact-form"
+                    class="contact-form"
+                    action="#"
+                    method="post"
+                    novalidate
+                    aria-label="Contact form"
+                >
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                placeholder="Jane Smith"
+                                required
+                                aria-required="true"
+                                aria-describedby="name-error"
+                            >
+                            <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="jane@example.com"
+                                required
+                                aria-required="true"
+                                aria-describedby="email-error"
+                            >
+                            <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell me about your project..."
+                            required
+                            aria-required="true"
+                            aria-describedby="message-error"
+                        ></textarea>
+                        <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn" aria-label="Send your message">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon" aria-hidden="true">→</span>
+                    </button>
+
+                    <div class="form-success" id="form-success" role="status" aria-live="polite" aria-atomic="true" hidden>
+                        ✓ Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Fazle Rabbi Faiyaz</p>
+            <p class="footer-note">Designed &amp; built with care.</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div
+        id="lightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+        hidden
+    >
+        <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image preview">✕</button>
+            <img id="lightbox-img" src="" alt="" class="lightbox-image">
+            <p  id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script>
+    /* ================================================
+       STEP 3 — Basic Interactivity
+       ================================================ */
+
+    /**
+     * toggleMenu()
+     * Toggles the mobile navigation overlay open/closed.
+     * Syncs aria-expanded on the hamburger button and
+     * prevents background scroll while the menu is open.
+     */
+    function toggleMenu() {
+        var btn   = document.getElementById('hamburger-btn');
+        var nav   = document.getElementById('primary-nav');
+
+        if (!btn || !nav) {
+            console.error('[toggleMenu] Required elements not found in DOM');
+            return;
+        }
+
+        var isOpen = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+
+        console.log('[toggleMenu] Menu is now:', isOpen ? 'OPEN' : 'CLOSED');
+    }
+
+    // Bind hamburger button to toggleMenu
+    var hamburgerBtn = document.getElementById('hamburger-btn');
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        console.log('[init] Hamburger button bound to toggleMenu()');
+    } else {
+        console.error('[init] #hamburger-btn not found');
+    }
+
+    // Close menu when a nav link is clicked (mobile UX)
+    document.querySelectorAll('#primary-nav a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var nav = document.getElementById('primary-nav');
+            nav.classList.remove('open');
+            document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+
+    /**
+     * Smooth scrolling for all anchor links (href="#section").
+     * Falls back gracefully if the target element doesn't exist.
+     */
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href').slice(1);
+            if (!targetId) return;   // bare '#' — skip
+
+            var target = document.getElementById(targetId);
+            if (!target) {
+                console.warn('[smoothScroll] Target not found:', '#' + targetId);
+                return;
+            }
+
+            e.preventDefault();
+            console.log('[smoothScroll] Scrolling to:', '#' + targetId);
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+
+    /* ================================================
+       STEP 4 — Projects: Filter & Lightbox
+       ================================================ */
+
+    /**
+     * filterProjects(category)
+     * Shows only the project cards matching `category`.
+     * Passing 'all' reveals every card.
+     * Updates aria-pressed on the filter buttons.
+     *
+     * @param {string} category  'all' | 'web' | 'mobile' | 'ml'
+     */
+    function filterProjects(category) {
+        console.log('[filterProjects] Filtering by:', category);
+
+        var validCategories = ['all', 'web', 'mobile', 'ml'];
+        if (validCategories.indexOf(category) === -1) {
+            console.error('[filterProjects] Unknown category:', category);
+            return;
+        }
+
+        var cards    = document.querySelectorAll('#projects-grid .project-card');
+        var btns     = document.querySelectorAll('.filter-btn');
+        var emptyMsg = document.getElementById('projects-empty');
+        var visible  = 0;
+
+        // Show or hide each card based on its data-category attribute
+        cards.forEach(function(card) {
+            var cardCat = card.getAttribute('data-category');
+            var show    = (category === 'all' || cardCat === category);
+
+            card.hidden = !show;
+            card.setAttribute('aria-hidden', String(!show));
+            if (show) {
+                visible++;
+                console.log('[filterProjects] Visible:', cardCat);
+            }
+        });
+
+        // Toggle the "no results" message
+        if (emptyMsg) emptyMsg.hidden = (visible > 0);
+
+        // Sync aria-pressed and .active class on filter buttons
+        btns.forEach(function(btn) {
+            var btnCat  = btn.textContent.trim();
+            var pressed = (btnCat === 'All' && category === 'all')
+                       || (btnCat.toLowerCase().replace(' ', '') === category);
+            btn.classList.toggle('active', pressed);
+            btn.setAttribute('aria-pressed', String(pressed));
+        });
+
+        console.log('[filterProjects] Cards visible after filter:', visible);
+    }
+
+    /**
+     * openLightbox(imgEl)
+     * Opens a full-screen lightbox for the given thumbnail image.
+     * Copies src / alt into the modal and shifts focus to the close button.
+     *
+     * @param {HTMLImageElement} imgEl  The thumbnail that was activated
+     */
+    function openLightbox(imgEl) {
+        var lightbox   = document.getElementById('lightbox');
+        var lbImg      = document.getElementById('lightbox-img');
+        var lbCaption  = document.getElementById('lightbox-caption');
+
+        if (!lightbox || !lbImg) {
+            console.error('[openLightbox] Lightbox elements missing from DOM');
+            return;
+        }
+
+        lbImg.src     = imgEl.src;
+        lbImg.alt     = imgEl.alt;
+        lbCaption.textContent = imgEl.alt;
+
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';   // prevent background scroll
+
+        // Move focus to close button for keyboard accessibility
+        var closeBtn = lightbox.querySelector('.lightbox-close');
+        if (closeBtn) closeBtn.focus();
+
+        console.log('[openLightbox] Showing image:', imgEl.src);
+    }
+
+    /**
+     * closeLightbox()
+     * Hides the lightbox modal and restores normal page scroll.
+     */
+    function closeLightbox() {
+        var lightbox = document.getElementById('lightbox');
+        if (!lightbox) {
+            console.error('[closeLightbox] Lightbox element not found');
+            return;
+        }
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+        console.log('[closeLightbox] Lightbox dismissed');
+    }
+
+    // Bind click and keyboard (Enter / Space) to each lightbox trigger
+    // document.querySelectorAll('.lightbox-trigger').forEach(function(trigger) {
+    //     trigger.addEventListener('click', function() {
+    //         openLightbox(this);
+    //     });
+
+    //     trigger.addEventListener('keydown', function(e) {
+    //         if (e.key === 'Enter' || e.key === ' ') {
+    //             e.preventDefault();
+    //             openLightbox(this);
+    //         }
+    //     });
+    // });
+
+    // Escape key closes the lightbox from anywhere on the page
+    document.addEventListener('keydown', function(e) {
+        var lightbox = document.getElementById('lightbox');
+        if (e.key === 'Escape' && lightbox && !lightbox.hidden) {
+            closeLightbox();
+        }
+    });
+
+
+    /* ================================================
+       STEP 5 — Form Validation
+       ================================================ */
+
+    /**
+     * validateField(field)
+     * Validates a single form field and returns an error string,
+     * or '' if the field is valid.
+     *
+     * Rules:
+     *   All fields  — must not be blank
+     *   #name       — at least 2 characters
+     *   #email      — must match basic email pattern
+     *   #message    — at least 10 characters
+     *
+     * @param  {HTMLInputElement|HTMLTextAreaElement} field
+     * @returns {string}  Error message, or '' if valid
+     */
+    function validateField(field) {
+        var value = field.value.trim();
+
+        if (value === '') {
+            return 'This field is required.';
+        }
+
+        if (field.id === 'name' && value.length < 2) {
+            return 'Name must be at least 2 characters.';
+        }
+
+        if (field.id === 'email') {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                return 'Please enter a valid email address (e.g. jane@example.com).';
+            }
+        }
+
+        if (field.id === 'message' && value.length < 10) {
+            return 'Message must be at least 10 characters.';
+        }
+
+        return '';  // field is valid
+    }
+
+    /**
+     * showFieldError(field, message)
+     * Marks a field as invalid and displays its error message.
+     */
+    function showFieldError(field, message) {
+        var errorEl = document.getElementById(field.id + '-error');
+        if (!errorEl) {
+            console.warn('[showFieldError] No error element found for:', field.id);
+            return;
+        }
+        errorEl.textContent = message;
+        field.setAttribute('aria-invalid', 'true');
+        field.classList.add('invalid');
+    }
+
+    /**
+     * clearFieldError(field)
+     * Removes any error state from a field.
+     */
+    function clearFieldError(field) {
+        var errorEl = document.getElementById(field.id + '-error');
+        if (errorEl) errorEl.textContent = '';
+        field.removeAttribute('aria-invalid');
+        field.classList.remove('invalid');
+    }
+
+    // Wire up real-time (input + blur) validation for each form field
+    var contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        contactForm.querySelectorAll('input, textarea').forEach(function(field) {
+
+            // Validate as the user types (real-time feedback)
+            field.addEventListener('input', function() {
+                var error = validateField(this);
+                if (error) {
+                    showFieldError(this, error);
+                } else {
+                    clearFieldError(this);
+                }
+                console.log('[realTimeValidation] id:', this.id, '| status:', error || 'OK');
+            });
+
+            // Validate when the user leaves a field
+            field.addEventListener('blur', function() {
+                var error = validateField(this);
+                if (error) showFieldError(this, error);
+            });
+        });
+
+        // Submit handler — validates all fields before allowing submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('[formSubmit] Running full-form validation...');
+
+            var allFields = this.querySelectorAll('input[required], textarea[required]');
+            var isValid   = true;
+
+            allFields.forEach(function(field) {
+                var error = validateField(field);
+                if (error) {
+                    showFieldError(field, error);
+                    isValid = false;
+                    console.warn('[formSubmit] Invalid —', field.id + ':', error);
+                } else {
+                    clearFieldError(field);
+                }
+            });
+
+            if (isValid) {
+                console.log('[formSubmit] All fields valid — submission accepted');
+                contactForm.reset();
+                var successMsg = document.getElementById('form-success');
+                successMsg.hidden = false;
+                setTimeout(function() { successMsg.hidden = true; }, 5000);
+            } else {
+                console.log('[formSubmit] Blocked — one or more fields are invalid');
+                // Focus the first invalid field for keyboard/screen-reader users
+                var firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
+                if (firstInvalid) firstInvalid.focus();
+            }
+        });
+
+        console.log('[init] Form validation attached to #contact-form');
+    } else {
+        console.error('[init] #contact-form not found in DOM');
+    }
+
+
+    /* ================================================
+       UTILITY
+       ================================================ */
+
+    // Populate the footer year dynamically
+    var yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    } else {
+        console.warn('[init] #year element not found');
+    }
+
+    console.log('[init] All portfolio scripts loaded successfully ✓');
+    </script>
+</body>
+</html>
