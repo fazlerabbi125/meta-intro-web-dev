@@ -42,7 +42,7 @@
             <div class="hero-content">
                 <p class="hero-eyebrow">Software Developer</p>
                 <h1>Fazle Rabbi<br><em>Faiyaz</em></h1>
-                <p class="hero-tagline">Building thoughtful software at the intersection of web, mobile, and machine learning.</p>
+                <p class="hero-tagline">Building thoughtful, secure, and efficient web applications</p>
                 <a href="#projects" class="cta-btn" aria-label="View my projects">View Work ↓</a>
             </div>
             <div class="hero-decoration" aria-hidden="true">
@@ -58,7 +58,7 @@
                 <div class="section-label" aria-hidden="true">01 / About</div>
                 <h2 id="about-heading">About Me</h2>
                 <div class="about-body">
-                    <p>Hello! I'm a passionate software developer with experience in <strong>web development</strong>, <strong>mobile app development</strong>, and <strong>machine learning</strong>. I enjoy creating innovative solutions to complex problems and am always eager to learn new technologies.</p>
+                    <p>Hello! I'm a passionate software developer with approximately 4 years of professional experience in <strong>web development</strong>. I enjoy creating innovative solutions to complex problems and am always eager to learn new technologies.</p>
                     <p>I thrive at the crossroads of clean engineering and thoughtful design — writing code that not only works, but works beautifully.</p>
                 </div>
             </div>
@@ -72,19 +72,19 @@
 
                 <!-- Step 4: Filter bar -->
                 <div class="filter-bar" role="group" aria-label="Filter projects by category">
-                    <button class="filter-btn active" onclick="filterProjects('all')"    aria-pressed="true" >All</button>
-                    <button class="filter-btn"        onclick="filterProjects('web')"    aria-pressed="false">Web App</button>
-                    <button class="filter-btn"        onclick="filterProjects('mobile')" aria-pressed="false">Mobile</button>
-                    <button class="filter-btn"        onclick="filterProjects('ml')"     aria-pressed="false">ML</button>
+                    <button class="filter-btn active" onclick="filterProjects('all')"      aria-pressed="true" >All</button>
+                    <button class="filter-btn"        onclick="filterProjects('fullstack')" aria-pressed="false">Full Stack</button>
+                    <button class="filter-btn"        onclick="filterProjects('frontend')"  aria-pressed="false">Frontend</button>
+                    <button class="filter-btn"        onclick="filterProjects('api')"       aria-pressed="false">API</button>
                 </div>
 
                 <div class="projects-grid" id="projects-grid" role="list">
 
-                    <article class="project-card" role="listitem" data-category="web" aria-labelledby="project-a-title">
+                    <article class="project-card" role="listitem" data-category="fullstack" aria-labelledby="project-a-title">
                         <figure class="project-figure">
                             <div class="project-visual">
                                 <img
-                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=FitTrack"
+                                    src="https://placehold.co/600x300/1c1c1c/a3e635?text=FitTrack"
                                     alt="FitTrack app dashboard — fitness tracking web application"
                                     class="project-img lightbox-trigger"
                                     tabindex="0"
@@ -94,11 +94,11 @@
                                 >
                             </div>
                             <figcaption class="project-meta">
-                                <span class="project-tag">Web App</span>
+                                <span class="project-tag">Full Stack</span>
                                 <h3 id="project-a-title">FitTrack</h3>
                                 <p>A web application that helps users set, monitor, and achieve their fitness goals with personalised dashboards and progress analytics.</p>
                                 <ul class="project-tech" aria-label="Technologies used">
-                                    <li>React</li>
+                                    <li>Vue.js</li>
                                     <li>Django</li>
                                     <li>PostgreSQL</li>
                                 </ul>
@@ -107,56 +107,56 @@
                         </figure>
                     </article>
 
-                    <article class="project-card" role="listitem" data-category="mobile" aria-labelledby="project-b-title">
+                    <article class="project-card" role="listitem" data-category="frontend" aria-labelledby="project-b-title">
                         <figure class="project-figure">
                             <div class="project-visual">
                                 <img
-                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=SkyPulse"
-                                    alt="SkyPulse mobile app — real-time weather forecast interface"
+                                    src="https://placehold.co/600x300/1c1c1c/a3e635?text=DevDash"
+                                    alt="DevDash — developer analytics dashboard"
                                     class="project-img lightbox-trigger"
                                     tabindex="0"
                                     role="button"
                                     aria-haspopup="dialog"
-                                    aria-label="View SkyPulse screenshot in lightbox"
+                                    aria-label="View DevDash screenshot in lightbox"
                                 >
                             </div>
                             <figcaption class="project-meta">
-                                <span class="project-tag">Mobile App</span>
-                                <h3 id="project-b-title">SkyPulse</h3>
-                                <p>A mobile app delivering real-time weather updates, hourly forecasts, and severe weather alerts using live meteorological data.</p>
+                                <span class="project-tag">Frontend</span>
+                                <h3 id="project-b-title">DevDash</h3>
+                                <p>An interactive developer dashboard with real-time data visualisation, theme customisation, and responsive layouts.</p>
                                 <ul class="project-tech" aria-label="Technologies used">
-                                    <li>React Native</li>
-                                    <li>OpenWeather API</li>
-                                    <li>AWS</li>
+                                    <li>TypeScript</li>
+                                    <li>Nuxt.js</li>
+                                    <li>Tailwind CSS</li>
                                 </ul>
-                                <a href="#" class="project-link" aria-label="View SkyPulse project details">View Project →</a>
+                                <a href="#" class="project-link" aria-label="View DevDash project details">View Project →</a>
                             </figcaption>
                         </figure>
                     </article>
 
-                    <article class="project-card" role="listitem" data-category="ml" aria-labelledby="project-c-title">
+                    <article class="project-card" role="listitem" data-category="api" aria-labelledby="project-c-title">
                         <figure class="project-figure">
                             <div class="project-visual">
                                 <img
-                                    src="https://placehold.co/600x300/1c1c1c/c8f265?text=StockSeer"
-                                    alt="StockSeer ML model — predicted stock price chart output"
+                                    src="https://placehold.co/600x300/1c1c1c/a3e635?text=AuthVault"
+                                    alt="AuthVault — secure authentication REST API"
                                     class="project-img lightbox-trigger"
                                     tabindex="0"
                                     role="button"
                                     aria-haspopup="dialog"
-                                    aria-label="View StockSeer screenshot in lightbox"
+                                    aria-label="View AuthVault screenshot in lightbox"
                                 >
                             </div>
                             <figcaption class="project-meta">
-                                <span class="project-tag">Machine Learning</span>
-                                <h3 id="project-c-title">StockSeer</h3>
-                                <p>A machine learning model that forecasts stock price movements using LSTM networks trained on multi-year historical market data.</p>
+                                <span class="project-tag">API</span>
+                                <h3 id="project-c-title">AuthVault</h3>
+                                <p>A secure authentication REST API with JWT tokens, role-based access control, and rate limiting for production applications.</p>
                                 <ul class="project-tech" aria-label="Technologies used">
                                     <li>Python</li>
-                                    <li>TensorFlow</li>
-                                    <li>Flask</li>
+                                    <li>FastAPI</li>
+                                    <li>MySQL</li>
                                 </ul>
-                                <a href="#" class="project-link" aria-label="View StockSeer project details">View Project →</a>
+                                <a href="#" class="project-link" aria-label="View AuthVault project details">View Project →</a>
                             </figcaption>
                         </figure>
                     </article>
@@ -181,38 +181,51 @@
                         <ul role="list" aria-label="Programming languages">
                             <li>Python</li>
                             <li>JavaScript</li>
-                            <li>Java</li>
                             <li>TypeScript</li>
+                            <li>HTML &amp; CSS</li>
+                            <li>SASS</li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <h3 class="skill-group-title">Frameworks</h3>
-                        <ul role="list" aria-label="Frameworks and libraries">
+                        <h3 class="skill-group-title">Frontend</h3>
+                        <ul role="list" aria-label="Frontend frameworks">
                             <li>React</li>
-                            <li>React Native</li>
-                            <li>Django</li>
-                            <li>Flask</li>
+                            <li>Next.js</li>
+                            <li>Vue.js</li>
+                            <li>Nuxt.js</li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <h3 class="skill-group-title">Tools &amp; Cloud</h3>
-                        <ul role="list" aria-label="Tools and cloud services">
+                        <h3 class="skill-group-title">Backend</h3>
+                        <ul role="list" aria-label="Backend frameworks">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Django</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Databases &amp; ORMs</h3>
+                        <ul role="list" aria-label="Databases and ORMs">
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>SQLite</li>
+                            <li>Redis</li>
+                            <li>Prisma</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Tools</h3>
+                        <ul role="list" aria-label="Developer tools">
                             <li>Git &amp; GitHub</li>
                             <li>Docker</li>
-                            <li>AWS</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-group">
-                        <h3 class="skill-group-title">ML &amp; Data</h3>
-                        <ul role="list" aria-label="Machine learning and data tools">
-                            <li>TensorFlow</li>
-                            <li>PyTorch</li>
-                            <li>Pandas</li>
-                            <li>Scikit-learn</li>
+                            <li>Linux</li>
+                            <li>REST APIs</li>
                         </ul>
                     </div>
 
@@ -298,7 +311,6 @@
     <footer role="contentinfo">
         <div class="footer-inner">
             <p>© <span id="year"></span> Fazle Rabbi Faiyaz</p>
-            <p class="footer-note">Designed &amp; built with care.</p>
         </div>
     </footer>
 
@@ -431,9 +443,9 @@
 
         // Sync aria-pressed and .active class on filter buttons
         btns.forEach(function(btn) {
-            var btnCat  = btn.textContent.trim();
-            var pressed = (btnCat === 'All' && category === 'all')
-                       || (btnCat.toLowerCase().replace(' ', '') === category);
+            var btnCat  = btn.getAttribute('onclick').match(/filterProjects\('(\w+)'\)/);
+            var btnVal  = btnCat ? btnCat[1] : '';
+            var pressed = (btnVal === category);
             btn.classList.toggle('active', pressed);
             btn.setAttribute('aria-pressed', String(pressed));
         });
@@ -488,18 +500,18 @@
     }
 
     // Bind click and keyboard (Enter / Space) to each lightbox trigger
-    // document.querySelectorAll('.lightbox-trigger').forEach(function(trigger) {
-    //     trigger.addEventListener('click', function() {
-    //         openLightbox(this);
-    //     });
+    document.querySelectorAll('.lightbox-trigger').forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            openLightbox(this);
+        });
 
-    //     trigger.addEventListener('keydown', function(e) {
-    //         if (e.key === 'Enter' || e.key === ' ') {
-    //             e.preventDefault();
-    //             openLightbox(this);
-    //         }
-    //     });
-    // });
+        trigger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(this);
+            }
+        });
+    });
 
     // Escape key closes the lightbox from anywhere on the page
     document.addEventListener('keydown', function(e) {
